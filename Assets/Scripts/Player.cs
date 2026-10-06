@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
+    [SerializeField] private Health health; 
     [SerializeField] public float moveSpeed = 30f;
     [SerializeField] public float jumpForce = 30f;
     [SerializeField] public float acceleration = 80f;

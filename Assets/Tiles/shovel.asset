@@ -10,9 +10,9 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: grass_0
+  m_Name: shovel
   m_EditorClassIdentifier: UnityEngine.dll::UnityEngine.Tilemaps.Tile
-  m_Sprite: {fileID: 7932798033344189819, guid: ac9db58094cba4639b28f0e18968c06b, type: 3}
+  m_Sprite: {fileID: -7263262467203474343, guid: 1638d074c66ed468db82ce4aa75d5775, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1

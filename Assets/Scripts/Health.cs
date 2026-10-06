@@ -5,8 +5,8 @@ using TMPro;
 public class Health : MonoBehaviour
 {
     const float DAMAGE = 1;
-    private float startingLives = 3;
-    private float currentLives;
+    public float startingLives = 3;
+    public float currentLives;
     [SerializeField] private TMP_Text healthText;
 
     [Header("Getting hit")]
@@ -115,5 +115,11 @@ public class Health : MonoBehaviour
         // guard it - if the text isn't hooked up the whole hit reaction used to blow up here
         if (healthText == null) return;
         healthText.text = "lives: " + currentLives;
+    }
+
+    public void AddHealth()
+    {
+        currentLives = Mathf.Clamp(currentLives + 1, 0, startingLives);
+        UpdateHealthText();
     }
 }
