@@ -3,10 +3,10 @@ using UnityEngine.InputSystem;
 
 public class Player : MonoBehaviour
 {
-    public float moveSpeed = 5f;
-    public float jumpForce = 5f;
-    public float acceleration = 60f;
-    public float deceleration = 70f;
+    [SerializeField] public float moveSpeed = 30f;
+    [SerializeField] public float jumpForce = 30f;
+    [SerializeField] public float acceleration = 80f;
+    [SerializeField] public float deceleration = 70f;
 
     public float coyoteTime = 0.1f;
     public float jumpBufferTime = 0.1f;
@@ -15,7 +15,7 @@ public class Player : MonoBehaviour
     public float fastFallForce = 30f;
 
     public Transform groundCheck;
-    public float groundCheckRadius = 0.2f;
+    public float groundCheckRadius = 0.3f;
     public LayerMask groundLayer;
 
     private Rigidbody2D rb;

@@ -4,7 +4,7 @@ using UnityEngine.SceneManagement;
 
 public class ButtonUI : MonoBehaviour
 {
-    [SerializeField] private string gameScene = "GameScene";
+    [SerializeField] private string gameScene = "Game";
     [SerializeField] private GameObject instructions;
     public void NewGameButton()
     {

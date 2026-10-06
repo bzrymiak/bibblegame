@@ -944,7 +944,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e99298580d789412a87a42c25646c28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: '::'
-  gameScene: Intro
+  gameScene: Game
   instructions: {fileID: 664237891}
 --- !u!4 &1028339316
 Transform:
