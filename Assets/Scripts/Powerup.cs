@@ -12,12 +12,13 @@ public class Powerup : MonoBehaviour
         switch (gameObject.tag)
         {
             case "RedBerry":
-                if (health.currentLives < health.startingLives)
-                {
-                    health.AddHealth();
-                }
-                Destroy(gameObject);
+                // only eat it if it actually does something, otherwise leave it
+                // on the map so you can come back for it after taking a hit
+                if (health.currentLives >= health.startingLives) return;
+
+                health.AddHealth();
                 totalBerries++;
+                Destroy(gameObject);
                 break;
             case "Coin":
                 totalCoins++;
