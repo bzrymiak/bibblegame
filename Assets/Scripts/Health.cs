@@ -51,9 +51,10 @@ public class Health : MonoBehaviour
         TakeDamage(transform.position);
     }
 
-    public void TakeDamage(Vector2 source)
+    public void TakeDamage(Vector2 source, bool ignoreInvulnerability = false)
     {
-        if (invulnerable || currentLives <= 0) return;
+        if (currentLives <= 0) return;
+        if (invulnerable && !ignoreInvulnerability) return;
 
         currentLives = Mathf.Clamp(currentLives - DAMAGE, 0, startingLives);
         UpdateHealthText();
@@ -68,10 +69,8 @@ public class Health : MonoBehaviour
         StartCoroutine(HitStop());
         StartCoroutine(FlashAndBlink());
 
-        if (currentLives <= 0)
-        {
-            Debug.Log("bibble got hit");
-        }
+        if (currentLives <= 0 && GameManager.Instance != null)
+            GameManager.Instance.LoseRun("bibble ran out of lives");
     }
 
     // tiny freeze on impact
@@ -79,7 +78,10 @@ public class Health : MonoBehaviour
     {
         Time.timeScale = 0f;
         yield return new WaitForSecondsRealtime(hitStopDuration);
-        Time.timeScale = 1f;
+
+        // don't un-pause if the run ended during the freeze
+        if (GameManager.Instance == null || GameManager.Instance.IsPlaying)
+            Time.timeScale = 1f;
     }
 
     private IEnumerator FlashAndBlink()
