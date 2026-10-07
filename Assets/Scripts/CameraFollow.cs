@@ -9,7 +9,7 @@ public class CameraFollow : MonoBehaviour
     [Header("Auto scroll")]
     [Tooltip("Camera drives itself to the right instead of following the player")]
     public bool autoScroll = false;
-    public float scrollSpeed = 4f;
+    public float scrollSpeed = 6f;
     [Tooltip("Breathing room before the swarm starts moving")]
     public float startDelay = 1f;
 

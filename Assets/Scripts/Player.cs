@@ -4,9 +4,9 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Health health; 
-    [SerializeField] public float moveSpeed = 30f;
+    [SerializeField] public float moveSpeed = 50f;
     [SerializeField] public float jumpForce = 30f;
-    [SerializeField] public float acceleration = 80f;
+    [SerializeField] public float acceleration = 90f;
     [SerializeField] public float deceleration = 70f;
 
     public float coyoteTime = 0.1f;

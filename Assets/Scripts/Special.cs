@@ -23,6 +23,12 @@ public class Special : MonoBehaviour
                 Destroy(gameObject);
                 break;
 
+            case "BlueBerry":
+                // invincibility code here
+                GameScore.AddBerry();
+                Destroy(gameObject);
+                break;
+
             case "Peony":
                 Time.timeScale = 0;
                 endScreen.ShowWinScreen(GameScore.Total);
