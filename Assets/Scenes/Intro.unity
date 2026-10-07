@@ -144,7 +144,7 @@ VideoPlayer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 199747442}
   m_Enabled: 1
-  m_VideoClip: {fileID: 32900000, guid: c9e41c2144b194923b651e028d21d836, type: 3}
+  m_VideoClip: {fileID: 32900000, guid: dcd8b159a7f874b52bc5b7bda2cc47e1, type: 3}
   m_TargetCameraAlpha: 1
   m_TargetCamera3DLayout: 0
   m_TargetCamera: {fileID: 1489417822}
@@ -153,7 +153,7 @@ VideoPlayer:
   m_TargetMaterialRenderer: {fileID: 0}
   m_TargetMaterialProperty: <noninit>
   m_RenderMode: 1
-  m_AspectRatio: 2
+  m_AspectRatio: 1
   m_DataSource: 0
   m_TimeUpdateMode: 2
   m_PlaybackSpeed: 1
@@ -217,7 +217,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::CutsceneLoader
   gameScene: Game
-  delaySeconds: 2
+  delaySeconds: 6
 --- !u!4 &1313641185
 Transform:
   m_ObjectHideFlags: 0

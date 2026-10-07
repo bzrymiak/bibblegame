@@ -6,6 +6,7 @@ public class ButtonUI : MonoBehaviour
 {
     [SerializeField] private string gameScene = "Game";
     [SerializeField] private string introScene = "Intro";
+    [SerializeField] private string menuScene = "Menu";
     [SerializeField] private GameObject instructions;
     [SerializeField] private GameObject menuDisplay;
     [SerializeField] private Sprite[] menus;
@@ -32,6 +33,11 @@ public class ButtonUI : MonoBehaviour
     {
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameScene);
+    }
+
+    public void MenuButton()
+    {
+        SceneManager.LoadScene(menuScene);
     }
 
     public void OpenInstructions()

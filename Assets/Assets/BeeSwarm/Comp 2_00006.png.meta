@@ -1,0 +1,253 @@
+fileFormatVersion: 2
+guid: 6de0c778c8046427aa60b404c86b1759
+TextureImporter:
+  internalIDToNameTable:
+  - first:
+      213: -7465298718086667714
+    second: Comp 2_00006_0
+  - first:
+      213: 2217120877977566207
+    second: Comp 2_00006_1
+  - first:
+      213: 9208985021125695529
+    second: Comp 2_00006_2
+  - first:
+      213: 1020928596203899660
+    second: Comp 2_00006_3
+  - first:
+      213: 7432297295042855186
+    second: Comp 2_00006_4
+  - first:
+      213: 7461580698352682848
+    second: Comp 2_00006_5
+  - first:
+      213: 3391557324828843381
+    second: Comp 2_00006_6
+  - first:
+      213: 6268062749201241606
+    second: Comp 2_00006_7
+  - first:
+      213: 4721266698593399445
+    second: Comp 2_00006_8
+  - first:
+      213: 3527086929545930319
+    second: Comp 2_00006_9
+  - first:
+      213: 5805677421145563208
+    second: Comp 2_00006_10
+  - first:
+      213: -3373058318644183288
+    second: Comp 2_00006_11
+  - first:
+      213: 7495717822454096030
+    second: Comp 2_00006_12
+  - first:
+      213: -1803788235028138113
+    second: Comp 2_00006_13
+  - first:
+      213: -3504324666106538259
+    second: Comp 2_00006_14
+  - first:
+      213: 1587777558270189117
+    second: Comp 2_00006_15
+  - first:
+      213: -7352288286189389200
+    second: Comp 2_00006_16
+  - first:
+      213: 8791087404280461508
+    second: Comp 2_00006_17
+  - first:
+      213: 5120241713042184832
+    second: Comp 2_00006_18
+  - first:
+      213: 5904271433721422177
+    second: Comp 2_00006_19
+  - first:
+      213: -8524760171760668563
+    second: Comp 2_00006_20
+  - first:
+      213: -1236835733811643056
+    second: Comp 2_00006_21
+  - first:
+      213: 4367347799852006051
+    second: Comp 2_00006_22
+  - first:
+      213: -8163729197541808953
+    second: Comp 2_00006_23
+  - first:
+      213: -3795686932655341239
+    second: Comp 2_00006_24
+  - first:
+      213: -7575627997924362209
+    second: Comp 2_00006_25
+  - first:
+      213: 4700480216957154096
+    second: Comp 2_00006_26
+  - first:
+      213: 7721748299318754768
+    second: Comp 2_00006_27
+  - first:
+      213: 2206375100734234802
+    second: Comp 2_00006_28
+  - first:
+      213: 3073061440804546701
+    second: Comp 2_00006_29
+  - first:
+      213: -493977607214548477
+    second: Comp 2_00006_30
+  - first:
+      213: -3192736736455204388
+    second: Comp 2_00006_31
+  - first:
+      213: -3545819100660111954
+    second: Comp 2_00006_32
+  - first:
+      213: 833926092359414320
+    second: Comp 2_00006_33
+  - first:
+      213: 330749651593607458
+    second: Comp 2_00006_34
+  - first:
+      213: -8122766747419702208
+    second: Comp 2_00006_35
+  - first:
+      213: 2270528820538979235
+    second: Comp 2_00006_36
+  externalObjects: {}
+  serializedVersion: 13
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+    flipGreenChannel: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMipmapLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 1
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  swizzle: 50462976
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 4
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 4
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    ignorePlatformSupport: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Comp 2_00006_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 0
+        width: 1440
+        height: 1024
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      customData: 
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+      bones: []
+      spriteID: e32e3466e5ee56890800000000000000
+      internalID: -7465298718086667714
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    customData: 
+    physicsShape: []
+    bones: []
+    spriteID: 0de71be26b59a4fa6b94813f1d26dcfc
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    spriteCustomMetadata:
+      entries:
+      - key: SpriteEditor.SliceSettings
+        value: '{"sliceOnImport":false,"gridCellCount":{"x":1.0,"y":1.0},"gridSpriteSize":{"x":1440.0,"y":1024.0},"gridSpriteOffset":{"x":0.0,"y":0.0},"gridSpritePadding":{"x":0.0,"y":0.0},"pivot":{"x":0.5,"y":0.5},"pivotPixels":{"x":0.0,"y":0.0},"autoSlicingMethod":0,"spriteAlignment":0,"pivotUnitMode":0,"slicingType":2,"keepEmptyRects":false,"isAlternate":false}'
+    nameFileIdTable:
+      Comp 2_00006_0: -7465298718086667714
+  mipmapLimitGroupName: 
+  pSDRemoveMatte: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

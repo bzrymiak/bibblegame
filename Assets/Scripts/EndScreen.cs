@@ -1,3 +1,4 @@
+using System.Collections;
 using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
@@ -9,6 +10,7 @@ public class EndScreen : MonoBehaviour
     [SerializeField] private Image endBg;
     [SerializeField] private Image endTitle;
     [SerializeField] private TMP_Text scoreText;
+    [SerializeField] private GameObject swarm; 
 
     [Header("Win sprites")]
     [SerializeField] private Sprite winBgSprite;

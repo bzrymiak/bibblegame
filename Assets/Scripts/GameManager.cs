@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
 using TMPro;
+using System.Collections;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -30,6 +32,10 @@ public class GameManager : MonoBehaviour
     [Header("Caught by the swarm")]
     [Tooltip("How far past the left edge of the screen before the bees get him")]
     public float caughtMargin = 1f;
+
+    [SerializeField] private GameObject swarm;
+    private Image beeSwarm;
+    [SerializeField] private float swarmSeconds = 1.3f;
 
     private void Awake()
     {
@@ -80,11 +86,32 @@ public class GameManager : MonoBehaviour
 
     public void LoseRun(string blurb)
     {
-        // guard so it only fires once - Update was calling this every frame
+        // guard so it only fires once
         if (!IsPlaying) return;
 
-        State = RunState.Lost;
+        State = RunState.Lost; 
+        StartCoroutine(LoseSequence(blurb));
+    }
+
+    private IEnumerator LoseSequence(string blurb)
+    {
+        Time.timeScale = 0f;
+
+        if (swarm != null)
+        {
+            beeSwarm = swarm.GetComponent<Image>();
+            beeSwarm.enabled = true;
+            if (swarm.TryGetComponent(out Animator anim))
+            {
+                anim.updateMode = AnimatorUpdateMode.UnscaledTime; // makes sure it runs at timeScale 0
+                anim.Play(0, 0, 0f);   // state name, layer 0, start at the beginning
+            }
+        }
+
+        yield return new WaitForSecondsRealtime(swarmSeconds);
+
         if (endScreen != null) endScreen.ShowLoseScreen(blurb);
+        // if (swarm != null) beeSwarm.enabled = false; 
     }
 
     public void Restart()
