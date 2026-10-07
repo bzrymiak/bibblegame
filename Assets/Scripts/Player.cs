@@ -31,6 +31,10 @@ public class Player : MonoBehaviour
     private float jumpBufferTimer;
     private float staggerTimer;
 
+    // bumped by the blueberry powerup
+    [HideInInspector] public float speedMultiplier = 1f;
+    [HideInInspector] public float difficultyMultiplier = 1f;
+
     public bool IsGrounded => isGrounded;
     public bool IsStaggered => staggerTimer > 0f;
 
@@ -100,7 +104,7 @@ public class Player : MonoBehaviour
 
     private void Move()
     {
-        float target = moveInput * moveSpeed;
+        float target = moveInput * moveSpeed * speedMultiplier * difficultyMultiplier;
         float rate = Mathf.Abs(target) > 0.01f ? acceleration : deceleration;
         float newX = Mathf.MoveTowards(rb.linearVelocity.x, target, rate * Time.fixedDeltaTime);
         rb.linearVelocity = new Vector2(newX, rb.linearVelocity.y);

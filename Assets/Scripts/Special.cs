@@ -3,6 +3,7 @@ using UnityEngine;
 public class Special : MonoBehaviour
 {
     public EndScreen endScreen;
+    public float invincibleSeconds = 3f;
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -24,7 +25,7 @@ public class Special : MonoBehaviour
                 break;
 
             case "BlueBerry":
-                // invincibility code here
+                health.StartInvincibility(invincibleSeconds);
                 GameScore.AddBerry();
                 Destroy(gameObject);
                 break;
