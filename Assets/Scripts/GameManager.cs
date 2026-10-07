@@ -15,8 +15,8 @@ public class GameManager : MonoBehaviour
     public Camera cam;
 
     [Header("End screen")]
-    public GameObject endScreen;
-    public TMP_Text endScreenText;
+    public EndScreen endScreen;
+    // public TMP_Text endScreenText;
 
     [Header("Caught by the swarm")]
     [Tooltip("How far past the left edge of the screen before the bees get him")]
@@ -28,7 +28,7 @@ public class GameManager : MonoBehaviour
         Time.timeScale = 1f;
 
         if (cam == null) cam = Camera.main;
-        if (endScreen != null) endScreen.SetActive(false);
+        // if (endScreen != null) endScreen.SetActive(false);
     }
 
     private void Update()
@@ -39,31 +39,8 @@ public class GameManager : MonoBehaviour
         float leftEdge = cam.transform.position.x - cam.orthographicSize * cam.aspect;
 
         if (player.position.x < leftEdge - caughtMargin)
-            LoseRun("the bees caught you");
-    }
-
-    public void LoseRun(string reason)
-    {
-        if (!IsPlaying) return;
-
-        State = RunState.Lost;
-        ShowEndScreen(reason);
-        Time.timeScale = 0f;
-    }
-
-    public void WinRun()
-    {
-        if (!IsPlaying) return;
-
-        State = RunState.Won;
-        ShowEndScreen("you made it home");
-        Time.timeScale = 0f;
-    }
-
-    private void ShowEndScreen(string message)
-    {
-        if (endScreenText != null) endScreenText.text = message;
-        if (endScreen != null) endScreen.SetActive(true);
+            // LoseRun("the bees caught you");
+            endScreen.ShowLoseScreen("The bees caught Bibble!");
     }
 
     public void Restart()

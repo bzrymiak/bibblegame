@@ -70,7 +70,8 @@ public class Health : MonoBehaviour
         StartCoroutine(FlashAndBlink());
 
         if (currentLives <= 0 && GameManager.Instance != null)
-            GameManager.Instance.LoseRun("bibble ran out of lives");
+            // GameManager.Instance.LoseRun("bibble ran out of lives");
+            GameManager.Instance.endScreen.ShowLoseScreen("The bees caught Bibble!");
     }
 
     // tiny freeze on impact
