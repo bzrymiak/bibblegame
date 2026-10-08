@@ -14,6 +14,7 @@ public class Bee : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D other)
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Bees);
         if (other.GetComponentInParent<Player>() == null) return;
         if (GameManager.Instance == null) return;
 

@@ -25,42 +25,49 @@ public class ButtonUI : MonoBehaviour
 
     public void NewGameButton()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         Time.timeScale = 1f;
         SceneManager.LoadScene(introScene);
     }
 
     public void ReplayButton()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameScene);
     }
 
     public void MenuButton()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         SceneManager.LoadScene(menuScene);
     }
 
     public void OpenInstructions()
     {
         i = 0;
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         instructions.SetActive(true);
         ShowPage();
     }
 
     public void CloseInstructions()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         instructions.SetActive(false);
     }
 
     public void NextMenu()
     {
         if (i < menus.Length - 1) i++;
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         ShowPage();
     }
 
     public void PrevMenu()
     {
         if (i > 0) i--;
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         ShowPage();
     }
 

@@ -1,0 +1,83 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1 &6554128510532701854
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 2774318535327724213}
+  - component: {fileID: 4214540925810695243}
+  m_Layer: 0
+  m_Name: AudioController
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &2774318535327724213
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554128510532701854}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 258.336, y: -19.48387, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4214540925810695243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6554128510532701854}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4c6906327326348eab8e98631c962a7e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioController
+  AllSounds:
+  - Type: 0
+    Clip: {fileID: 8300000, guid: b3ec6ffff71c14158a0124e67672a3b0, type: 3}
+    Volume: 0.595
+    Source: {fileID: 0}
+  - Type: 1
+    Clip: {fileID: 8300000, guid: 5c2512dde8b0746738664644966dc535, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 2
+    Clip: {fileID: 8300000, guid: ca03ec51029d34751a649dc1077539e5, type: 3}
+    Volume: 0.619
+    Source: {fileID: 0}
+  - Type: 3
+    Clip: {fileID: 8300000, guid: 5c2512dde8b0746738664644966dc535, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 4
+    Clip: {fileID: 8300000, guid: eea07aee2a26c4b43adbc26d6cbeaba8, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 5
+    Clip: {fileID: 8300000, guid: 451931d56e2ec4ddda31954306c3e35a, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 6
+    Clip: {fileID: 8300000, guid: 4ce42eb65101f4f59b7f6618c991b1d6, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 7
+    Clip: {fileID: 8300000, guid: 01e2abf2977c54df1b1d2ce60fcd8e4a, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
+  - Type: 8
+    Clip: {fileID: 8300000, guid: 0e46732bd41954a93bdbd1418fd47ed4, type: 3}
+    Volume: 1
+    Source: {fileID: 0}
