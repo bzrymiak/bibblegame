@@ -10755,13 +10755,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Player
   health: {fileID: 1933920776}
-  moveSpeed: 18
-  jumpForce: 55
-  acceleration: 200
+  moveSpeed: 24
+  jumpForce: 59
+  acceleration: 210
   deceleration: 160
-  coyoteTime: 0.1
-  jumpBufferTime: 0.1
-  fallMultiplier: 2.5
+  coyoteTime: 0.15
+  jumpBufferTime: 0.15
+  fallMultiplier: 2
   lowJumpMultiplier: 3
   fastFallForce: 30
   groundCheck: {fileID: 1802899287}
@@ -10786,9 +10786,9 @@ MonoBehaviour:
   startingLives: 3
   currentLives: 0
   healthText: {fileID: 1576821777}
-  staggerDuration: 0.3
+  staggerDuration: 0.2
   invulnDuration: 1.2
-  knockbackX: 4.5
+  knockbackX: 3
   knockbackY: 1.5
   flashColour: {r: 1, g: 0.8, b: 0.82, a: 1}
   flashTime: 0.12

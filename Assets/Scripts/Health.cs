@@ -10,9 +10,9 @@ public class Health : MonoBehaviour
     [SerializeField] private TMP_Text healthText;
 
     [Header("Getting hit")]
-    public float staggerDuration = 0.3f;
+    public float staggerDuration = 0.2f;
     public float invulnDuration = 1.2f;
-    public float knockbackX = 4.5f;
+    public float knockbackX = 3f;
     public float knockbackY = 1.5f;
 
     [Header("Flash")]

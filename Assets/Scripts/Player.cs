@@ -4,14 +4,14 @@ using UnityEngine.InputSystem;
 public class Player : MonoBehaviour
 {
     [SerializeField] private Health health; 
-    [SerializeField] public float moveSpeed = 50f;
-    [SerializeField] public float jumpForce = 30f;
-    [SerializeField] public float acceleration = 90f;
-    [SerializeField] public float deceleration = 70f;
+    [SerializeField] public float moveSpeed = 24f;
+    [SerializeField] public float jumpForce = 55f;
+    [SerializeField] public float acceleration = 200f;
+    [SerializeField] public float deceleration = 160f;
 
-    public float coyoteTime = 0.1f;
-    public float jumpBufferTime = 0.1f;
-    public float fallMultiplier = 2.5f;
+    public float coyoteTime = 0.15f;
+    public float jumpBufferTime = 0.15f;
+    public float fallMultiplier = 2f;
     public float lowJumpMultiplier = 3f;
     public float fastFallForce = 30f;
 
