@@ -23,25 +23,39 @@ public class ButtonUI : MonoBehaviour
         image = menuDisplay.GetComponent<Image>();
     }
 
+    // to trigger music on the startup menu
+    void Start()
+    {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.ChangeMusic(AudioManager.SoundType.BackgroundMusic);
+    }
+
     public void NewGameButton()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
+        AudioManager.Instance?.StopMusic();
         Time.timeScale = 1f;
         SceneManager.LoadScene(introScene);
     }
 
     public void ReplayButton()
     {
+        AudioManager.Instance.StopSound(AudioManager.SoundType.Bees);
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         Time.timeScale = 1f;
         SceneManager.LoadScene(gameScene);
     }
 
     public void MenuButton()
     {
+        AudioManager.Instance.StopSound(AudioManager.SoundType.Bees);
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         SceneManager.LoadScene(menuScene);
     }
 
     public void OpenInstructions()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         i = 0;
         instructions.SetActive(true);
         ShowPage();
@@ -49,17 +63,20 @@ public class ButtonUI : MonoBehaviour
 
     public void CloseInstructions()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         instructions.SetActive(false);
     }
 
     public void NextMenu()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         if (i < menus.Length - 1) i++;
         ShowPage();
     }
 
     public void PrevMenu()
     {
+        AudioManager.Instance.Play(AudioManager.SoundType.Button);
         if (i > 0) i--;
         ShowPage();
     }

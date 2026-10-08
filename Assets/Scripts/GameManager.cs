@@ -65,7 +65,18 @@ public class GameManager : MonoBehaviour
         float leftEdge = cam.transform.position.x - cam.orthographicSize * cam.aspect;
 
         if (player.position.x < leftEdge - caughtMargin)
+        {
+            AudioManager.Instance.Play(AudioManager.SoundType.Dead);
             LoseRun("The bees caught Bibble!");
+        }
+            
+    }
+
+    void Start()
+    {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.StopSound(AudioManager.SoundType.Bees);
+        AudioManager.Instance?.ChangeMusic(AudioManager.SoundType.BackgroundMusic);
     }
 
     private void RampDifficulty()
@@ -88,6 +99,7 @@ public class GameManager : MonoBehaviour
     {
         // guard so it only fires once
         if (!IsPlaying) return;
+        AudioManager.Instance?.StopMusic();
 
         State = RunState.Lost; 
         StartCoroutine(LoseSequence(blurb));
@@ -99,6 +111,8 @@ public class GameManager : MonoBehaviour
 
         if (swarm != null)
         {
+            if (Swarm.Instance != null) Swarm.Instance.SilenceSound();
+            AudioManager.Instance.Play(AudioManager.SoundType.Bees);
             beeSwarm = swarm.GetComponent<Image>();
             beeSwarm.enabled = true;
             if (swarm.TryGetComponent(out Animator anim))

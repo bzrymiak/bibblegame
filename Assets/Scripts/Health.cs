@@ -76,6 +76,7 @@ public class Health : MonoBehaviour
         if (invincible && !ignoreInvulnerability) return;
         if (invulnerable && !ignoreInvulnerability) return;
 
+        // AudioManager.Instance.Play(AudioManager.SoundType.Damage);
         currentLives = Mathf.Clamp(currentLives - DAMAGE, 0, startingLives);
         UpdateHealthText();
 
@@ -91,7 +92,13 @@ public class Health : MonoBehaviour
         StartCoroutine(FlashAndBlink());
 
         if (currentLives <= 0 && GameManager.Instance != null)
+        {
+            AudioManager.Instance.Play(AudioManager.SoundType.Dead);
             GameManager.Instance.LoseRun("The bees caught Bibble!");
+        } else
+        {
+            AudioManager.Instance.Play(AudioManager.SoundType.Damage);
+        }
     }
 
     // tiny freeze on impact

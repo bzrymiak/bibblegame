@@ -40,6 +40,10 @@ public class Swarm : MonoBehaviour
     public float driftAmount = 1.5f;
     public float driftSpeed = 1.4f;
 
+    [Header("Sound")]
+    [Tooltip("How far (in units) the bees need to slide in before the buzzing reaches full volume")]
+    public float audibleRange = 6f;
+
     private Transform[] bees;
     private Vector3[] homes;
     private float followY;
@@ -47,6 +51,7 @@ public class Swarm : MonoBehaviour
     private float visibleTimer;
     private float hideShift;
     private float hideShiftVelocity;
+    private bool soundSilenced;
 
     void Awake()
     {
@@ -110,5 +115,26 @@ public class Swarm : MonoBehaviour
 
             bees[i].localPosition = homes[i] + new Vector3(drift, bob, 0f);
         }
+
+        // 0 when they've slid fully off screen, 1 when they're at their home position
+        if (!soundSilenced && AudioManager.Instance != null)
+        {
+            float audible = Mathf.InverseLerp(-audibleRange, 0f, hideShift);
+            AudioManager.Instance.SetLoop(AudioManager.SoundType.Bees, audible);
+        }
+    }
+
+    void OnDisable()
+    {
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.StopLoop(AudioManager.SoundType.Bees);
+    }
+
+    // call when the lose (or win) sequence takes over the audio
+    public void SilenceSound()
+    {
+        soundSilenced = true;
+        if (AudioManager.Instance != null)
+            AudioManager.Instance.StopLoop(AudioManager.SoundType.Bees);
     }
 }

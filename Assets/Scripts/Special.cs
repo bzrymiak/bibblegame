@@ -13,6 +13,7 @@ public class Special : MonoBehaviour
         switch (gameObject.tag)
         {
             case "RedBerry":
+                AudioManager.Instance.Play(AudioManager.SoundType.Berry);
                 if (health.currentLives < health.startingLives)
                     health.AddHealth();
                 GameScore.AddBerry();
@@ -20,17 +21,22 @@ public class Special : MonoBehaviour
                 break;
 
             case "Coin":
+                AudioManager.Instance.Play(AudioManager.SoundType.Coin);
                 GameScore.AddCoin();
                 Destroy(gameObject);
                 break;
 
             case "BlueBerry":
+                AudioManager.Instance.Play(AudioManager.SoundType.Berry);
                 health.StartInvincibility(invincibleSeconds);
                 GameScore.AddBerry();
                 Destroy(gameObject);
                 break;
 
             case "Peony":
+                if (Swarm.Instance != null) Swarm.Instance.SilenceSound();
+                AudioManager.Instance?.StopMusic();
+                AudioManager.Instance.Play(AudioManager.SoundType.Victory);
                 Time.timeScale = 0;
                 endScreen.ShowWinScreen(GameScore.Total);
                 break;

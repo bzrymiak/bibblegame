@@ -17,6 +17,7 @@ public class Bee : MonoBehaviour
         if (other.GetComponentInParent<Player>() == null) return;
         if (GameManager.Instance == null) return;
 
+        AudioManager.Instance.Play(AudioManager.SoundType.Dead);
         GameManager.Instance.LoseRun(caughtMessage);
     }
 }
