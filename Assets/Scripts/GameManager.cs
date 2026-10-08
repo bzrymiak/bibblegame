@@ -27,7 +27,7 @@ public class GameManager : MonoBehaviour
     public float rampInterval = 20f;
     [Tooltip("How much the scroll speed goes up each time")]
     public float scrollSpeedStep = 5f;
-    public float maxScrollSpeed = 40f;
+    public float maxScrollSpeed = 25f;
 
     [Header("Caught by the swarm")]
     [Tooltip("How far past the left edge of the screen before the bees get him")]
